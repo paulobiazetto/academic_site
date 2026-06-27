@@ -1,0 +1,44 @@
+[
+  {
+    "date": "2025-06-10",
+    "title": "Paper accepted in Automatica",
+    "description": "Our work on backstepping boundary stabilization of coupled parabolic PDEs with spatially varying coefficients has been accepted for publication.",
+    "link": "https://doi.org/10.0000/automatica.2025.0142"
+  },
+  {
+    "date": "2025-05-02",
+    "title": "Invited talk at the Distributed-Parameter Systems Workshop",
+    "description": "Presented recent results on data-driven control of thermoacoustic instabilities and the analytical bridges required for practical exponential stability.",
+    "link": ""
+  },
+  {
+    "date": "2025-03-18",
+    "title": "New preprint on adaptive boundary control",
+    "description": "A preprint on adaptive boundary control of parabolic PDEs with unknown diffusivity is now available on arXiv.",
+    "link": "https://doi.org/10.0000/arxiv.2506.01928"
+  },
+  {
+    "date": "2024-11-15",
+    "title": "Best paper finalist at CDC 2024",
+    "description": "Our paper on a separation principle for observer-based boundary control of infinite-dimensional systems was selected as a best-paper finalist.",
+    "link": "https://doi.org/10.0000/cdc.2024.556231"
+  },
+  {
+    "date": "2024-09-01",
+    "title": "Research visit at TU Delft",
+    "description": "Started a three-month research visit collaborating on reduced-order modeling and control of energy systems.",
+    "link": ""
+  },
+  {
+    "date": "2024-02-20",
+    "title": "New project funded",
+    "description": "The National Research Foundation has funded our project on boundary control kernels for coupled reaction\u2013diffusion systems.",
+    "link": ""
+  },
+  {
+    "date": "2023-06-12",
+    "title": "Doctoral thesis defended",
+    "description": "Successfully defended a doctoral thesis on boundary control of partial differential equations, with distinction.",
+    "link": ""
+  }
+]

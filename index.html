@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO & social (edit per page) -->
+  <title>Paulo Biazetto — Control of Distributed-Parameter Systems</title>
+  <meta name="description" content="Homepage of Paulo Biazetto: boundary control of PDEs, infinite-dimensional systems, and machine learning for control. About, position, contact, and LinkedIn activity." />
+  <meta name="keywords" content="Paulo Biazetto, boundary control, PDE control, infinite-dimensional systems, backstepping, robust control, applied mathematics" />
+  <meta name="author" content="Paulo Biazetto" />
+  <link rel="canonical" href="https://example.edu/~paulo.biazetto/index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Paulo Biazetto — Control of Distributed-Parameter Systems" />
+  <meta property="og:description" content="Boundary control of PDEs, infinite-dimensional systems, and machine learning for control." />
+  <meta property="og:url" content="https://example.edu/~paulo.biazetto/index.html" />
+  <meta property="og:image" content="assets/profile/profile.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Paulo Biazetto — Control of Distributed-Parameter Systems" />
+  <meta name="twitter:description" content="Boundary control of PDEs, infinite-dimensional systems, and machine learning for control." />
+  <meta name="twitter:image" content="assets/profile/profile.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Apply saved theme/accent BEFORE first paint to avoid a flash.
+       This tiny script must stay inline in <head>. -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("site-theme");
+        var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (t === "dark" || (t === null && prefersDark)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+        var a = localStorage.getItem("site-accent");
+        if (a) document.documentElement.style.setProperty("--color-primary", a);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body data-page="home">
+  <span id="top"></span>
+  <a class="skip-link" href="#home-main">Skip to main content</a>
+
+  <!-- Shared header is injected here by script.js -->
+  <header class="site-header" id="site-header"></header>
+
+  <main class="page">
+    <div class="container">
+      <div class="home-grid">
+
+        <!-- LEFT: identity / presentation -->
+        <aside class="home-aside">
+          <!-- Professional photo placeholder — replace src with a real photo. -->
+          <img class="home-photo" src="assets/profile/profile.svg" alt="Portrait of Paulo Biazetto" width="640" height="800" />
+          <div>
+            <h1 class="home-name">Paulo Biazetto</h1>
+            <p class="home-role">Assistant Professor of Control Engineering</p>
+            <p class="home-affil">Department of Applied Mathematics · Example University</p>
+          </div>
+          <div class="home-actions">
+            <a class="button button--primary button--sm" href="publications.html">Publications</a>
+            <a class="button button--ghost button--sm" href="cv.html">View CV</a>
+          </div>
+          <!-- Social icons injected from the shared CONTACTS config -->
+          <div class="socials" data-socials aria-label="Profiles and contact"></div>
+        </aside>
+
+        <!-- RIGHT: about, position, interests, contact, linkedin -->
+        <div class="home-main" id="home-main">
+
+          <!-- About / Biography -->
+          <section class="home-block" aria-labelledby="about-heading">
+            <h2 class="home-block__heading" id="about-heading">About</h2>
+            <div class="prose">
+              <p>
+                I am an Assistant Professor in the Department of Applied Mathematics at
+                Example University, where I lead the Distributed-Parameter Control group.
+                My research develops rigorous control methods for systems described by
+                partial differential equations, with a focus on boundary actuation and the
+                gap between finite- and infinite-dimensional theory.
+              </p>
+              <p>
+                I received my Ph.D. in Control Engineering, defended with distinction, on the
+                boundary control of partial differential equations. I collaborate across
+                Europe and Asia on energy systems, mobility, and data-driven control.
+              </p>
+            </div>
+          </section>
+
+          <!-- Position -->
+          <section class="home-block" aria-labelledby="position-heading">
+            <h2 class="home-block__heading" id="position-heading">Position</h2>
+            <div class="kv">
+              <span class="kv__key">2023 — now</span>
+              <span>Assistant Professor, Department of Applied Mathematics, Example University</span>
+            </div>
+            <div class="kv">
+              <span class="kv__key">Group</span>
+              <span>Distributed-Parameter Control — boundary control, PDE systems, robust &amp; data-driven methods</span>
+            </div>
+            <div class="kv">
+              <span class="kv__key">Office</span>
+              <span>Building A, Room 312 · Office hours Tue 14:00–16:00</span>
+            </div>
+          </section>
+
+          <!-- Research interests -->
+          <section class="home-block" aria-labelledby="interests-heading">
+            <h2 class="home-block__heading" id="interests-heading">Research interests</h2>
+            <ul class="tag-list">
+              <li class="tag">Boundary control of PDEs</li>
+              <li class="tag">Infinite-dimensional systems</li>
+              <li class="tag">Backstepping &amp; Lyapunov methods</li>
+              <li class="tag">Robust &amp; predictive control</li>
+              <li class="tag">Machine learning for control</li>
+            </ul>
+          </section>
+
+          <!-- Contact information (shared config) -->
+          <section class="home-block" id="home-contact" aria-labelledby="contact-heading">
+            <h2 class="home-block__heading" id="contact-heading">Contact information</h2>
+            <ul class="contact-list" data-contacts></ul>
+          </section>
+
+          <!-- LinkedIn activity -->
+          <section class="home-block linkedin" aria-labelledby="linkedin-heading">
+            <h2 class="home-block__heading" id="linkedin-heading">LinkedIn activity</h2>
+            <div class="linkedin__grid">
+              <!-- Native profile card (always rendered, styled to match) -->
+              <div class="linkedin__profile" id="linkedin-profile"></div>
+              <!-- Recent posts (from a feed if configured, else curated highlights) -->
+              <div class="linkedin__feed" id="linkedin-feed"></div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Shared footer is injected here by script.js -->
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

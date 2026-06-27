@@ -1,0 +1,24 @@
+[
+  {
+    "embed": "",
+    "type": "Post",
+    "date": "2025-06-11",
+    "text": "Happy to share that our paper on backstepping boundary stabilization of coupled parabolic PDEs was accepted in Automatica. Grateful to my co-authors!",
+    "link": "https://www.linkedin.com/in/paulobiazetto/",
+    "_note": "Paste a public post link into \"embed\" (e.g. https://www.linkedin.com/feed/update/urn:li:activity:1234567890123456789) to render the live post instead of this text."
+  },
+  {
+    "embed": "",
+    "type": "Article",
+    "date": "2025-05-03",
+    "text": "New write-up: what \u201cpractical exponential stability\u201d really means when you move from an infinite-dimensional plant to a data-driven reduced-order model.",
+    "link": "https://www.linkedin.com/in/paulobiazetto/"
+  },
+  {
+    "embed": "",
+    "type": "Share",
+    "date": "2025-03-19",
+    "text": "Preprint out on adaptive boundary control of parabolic PDEs with unknown diffusivity \u2014 comments welcome.",
+    "link": "https://www.linkedin.com/in/paulobiazetto/"
+  }
+]

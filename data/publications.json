@@ -1,0 +1,134 @@
+[
+  {
+    "type": "Journal",
+    "title": "Backstepping Boundary Stabilization of a Class of Coupled Parabolic PDEs with Spatially Varying Coefficients",
+    "authors": "P. Biazetto, C. Laurent, A. Ferreira",
+    "venue": "Automatica",
+    "year": 2025,
+    "doi": "10.0000/automatica.2025.0142",
+    "pdf": "assets/pdf/biazetto-2025-backstepping.pdf",
+    "bibtex": "@article{biazetto2025backstepping,\n  author  = {Biazetto, Paulo and Laurent, Claire and Ferreira, Andr\u00e9},\n  title   = {Backstepping Boundary Stabilization of a Class of Coupled Parabolic PDEs with Spatially Varying Coefficients},\n  journal = {Automatica},\n  year    = {2025},\n  volume  = {171},\n  pages   = {111--134},\n  doi     = {10.0000/automatica.2025.0142}\n}",
+    "abstract": "We design a boundary feedback law that exponentially stabilizes a system of coupled reaction\u2013diffusion equations with spatially varying reaction terms. The control kernel is obtained from a well-posed Goursat problem, and exponential stability is proved in the L2 norm using a strict Lyapunov functional. Numerical experiments confirm the predicted decay rates."
+  },
+  {
+    "type": "Journal",
+    "title": "Practical Exponential Stability of a Reduced-Order Thermoacoustic Model via Dynamic Mode Decomposition with Control",
+    "authors": "P. Biazetto, R. Okafor",
+    "venue": "IEEE Transactions on Automatic Control",
+    "year": 2025,
+    "doi": "10.0000/tac.2025.3398765",
+    "pdf": "assets/pdf/biazetto-2025-thermoacoustic.pdf",
+    "bibtex": "@article{biazetto2025thermoacoustic,\n  author  = {Biazetto, Paulo and Okafor, Rita},\n  title   = {Practical Exponential Stability of a Reduced-Order Thermoacoustic Model via Dynamic Mode Decomposition with Control},\n  journal = {IEEE Transactions on Automatic Control},\n  year    = {2025},\n  volume  = {70},\n  number  = {6},\n  pages   = {3501--3516},\n  doi     = {10.0000/tac.2025.3398765}\n}",
+    "abstract": "A data-driven reduced-order model of a Rijke-tube thermoacoustic system is constructed using dynamic mode decomposition with control. We establish practical exponential stability of the closed loop on a finite-dimensional product space, making explicit the analytical bridges required to transfer the guarantee back to the underlying infinite-dimensional dynamics."
+  },
+  {
+    "type": "Journal",
+    "title": "Distributionally Robust Constraint-Tightening Model Predictive Control for Freeway Traffic Flow",
+    "authors": "P. Biazetto, S. Bianchi, T. Nakamura",
+    "venue": "SIAM Journal on Control and Optimization",
+    "year": 2024,
+    "doi": "10.0000/sicon.2024.118822",
+    "pdf": "assets/pdf/biazetto-2024-dr-mpc.pdf",
+    "bibtex": "@article{biazetto2024drmpc,\n  author  = {Biazetto, Paulo and Bianchi, Sofia and Nakamura, Taro},\n  title   = {Distributionally Robust Constraint-Tightening Model Predictive Control for Freeway Traffic Flow},\n  journal = {SIAM Journal on Control and Optimization},\n  year    = {2024},\n  volume  = {62},\n  number  = {4},\n  pages   = {2210--2239},\n  doi     = {10.0000/sicon.2024.118822}\n}",
+    "abstract": "Building on the Lighthill\u2013Whitham\u2013Richards macroscopic model, we formulate a model predictive controller that tightens constraints using a Wasserstein ambiguity set and a conditional value-at-risk reformulation. A moving-boundary reparameterization in the emission domain yields a tractable quadratic program solved online with OSQP."
+  },
+  {
+    "type": "Journal",
+    "title": "Resolvent Estimates and Well-Posedness for Boundary-Controlled Hyperbolic Systems on Networks",
+    "authors": "P. Biazetto, H. Vogel",
+    "venue": "ESAIM: Control, Optimisation and Calculus of Variations",
+    "year": 2023,
+    "doi": "10.0000/cocv.2023.099001",
+    "pdf": "assets/pdf/biazetto-2023-resolvent.pdf",
+    "bibtex": "@article{biazetto2023resolvent,\n  author  = {Biazetto, Paulo and Vogel, Hannah},\n  title   = {Resolvent Estimates and Well-Posedness for Boundary-Controlled Hyperbolic Systems on Networks},\n  journal = {ESAIM: Control, Optimisation and Calculus of Variations},\n  year    = {2023},\n  volume  = {29},\n  pages   = {41},\n  doi     = {10.0000/cocv.2023.099001}\n}",
+    "abstract": "We characterize the resolvent set of the generator associated with a boundary-controlled hyperbolic system posed on a metric graph and prove generation of a strongly continuous semigroup. The estimates yield input-to-state stability with respect to boundary disturbances."
+  },
+  {
+    "type": "Conference",
+    "title": "Separation Principle for Observer-Based Boundary Control of Infinite-Dimensional Systems",
+    "authors": "P. Biazetto, A. Ferreira",
+    "venue": "IEEE Conference on Decision and Control (CDC)",
+    "year": 2024,
+    "doi": "10.0000/cdc.2024.556231",
+    "pdf": "assets/pdf/biazetto-2024-separation.pdf",
+    "bibtex": "@inproceedings{biazetto2024separation,\n  author    = {Biazetto, Paulo and Ferreira, Andr\u00e9},\n  title     = {Separation Principle for Observer-Based Boundary Control of Infinite-Dimensional Systems},\n  booktitle = {Proc. 63rd IEEE Conference on Decision and Control (CDC)},\n  year      = {2024},\n  pages     = {1188--1194},\n  doi       = {10.0000/cdc.2024.556231}\n}",
+    "abstract": "We establish a separation principle for a class of boundary observer\u2013controller pairs acting on abstract evolution equations, giving sufficient conditions under which the cascade of a stable observer and a stabilizing feedback preserves closed-loop exponential stability."
+  },
+  {
+    "type": "Conference",
+    "title": "Learning Control Kernels for Reaction\u2013Diffusion Systems with Neural Operators",
+    "authors": "P. Biazetto, L. Park, R. Okafor",
+    "venue": "American Control Conference (ACC)",
+    "year": 2024,
+    "doi": "10.0000/acc.2024.778120",
+    "pdf": "assets/pdf/biazetto-2024-neural-kernels.pdf",
+    "bibtex": "@inproceedings{biazetto2024neural,\n  author    = {Biazetto, Paulo and Park, Lina and Okafor, Rita},\n  title     = {Learning Control Kernels for Reaction--Diffusion Systems with Neural Operators},\n  booktitle = {Proc. American Control Conference (ACC)},\n  year      = {2024},\n  pages     = {3320--3326},\n  doi       = {10.0000/acc.2024.778120}\n}",
+    "abstract": "We approximate backstepping control kernels with a neural operator, reducing online computation by two orders of magnitude while retaining provable stability margins on a benchmark family of parabolic systems."
+  },
+  {
+    "type": "Conference",
+    "title": "Robust Output Regulation of Boundary-Controlled Wave Equations under Parametric Uncertainty",
+    "authors": "P. Biazetto, H. Vogel, S. Bianchi",
+    "venue": "IFAC World Congress",
+    "year": 2023,
+    "doi": "10.0000/ifac.2023.041207",
+    "pdf": "assets/pdf/biazetto-2023-output-regulation.pdf",
+    "bibtex": "@inproceedings{biazetto2023regulation,\n  author    = {Biazetto, Paulo and Vogel, Hannah and Bianchi, Sofia},\n  title     = {Robust Output Regulation of Boundary-Controlled Wave Equations under Parametric Uncertainty},\n  booktitle = {Proc. 22nd IFAC World Congress},\n  year      = {2023},\n  pages     = {7044--7050},\n  doi       = {10.0000/ifac.2023.041207}\n}",
+    "abstract": "An internal-model-based regulator is designed for a wave equation with uncertain wave speed and boundary actuation, achieving asymptotic tracking of polynomial and sinusoidal references despite bounded parametric perturbations."
+  },
+  {
+    "type": "Book Chapter",
+    "title": "Lyapunov Methods for Infinite-Dimensional Systems: A Practitioner's Guide",
+    "authors": "P. Biazetto, C. Laurent",
+    "venue": "Advances in Distributed-Parameter Control (Springer)",
+    "year": 2024,
+    "doi": "10.0000/springer.2024.ch7",
+    "pdf": "assets/pdf/biazetto-2024-lyapunov-chapter.pdf",
+    "bibtex": "@incollection{biazetto2024lyapunov,\n  author    = {Biazetto, Paulo and Laurent, Claire},\n  title     = {Lyapunov Methods for Infinite-Dimensional Systems: A Practitioner's Guide},\n  booktitle = {Advances in Distributed-Parameter Control},\n  publisher = {Springer},\n  year      = {2024},\n  pages     = {163--201},\n  doi       = {10.0000/springer.2024.ch7}\n}",
+    "abstract": "This chapter surveys strict and non-strict Lyapunov functionals for partial differential equations, with worked examples spanning parabolic, hyperbolic, and coupled systems, and a discussion of common pitfalls when extending finite-dimensional intuition to Hilbert spaces."
+  },
+  {
+    "type": "Preprint",
+    "title": "Adaptive Boundary Control of Parabolic PDEs with Unknown Diffusivity",
+    "authors": "P. Biazetto, L. Park",
+    "venue": "arXiv:2506.01928",
+    "year": 2025,
+    "doi": "10.0000/arxiv.2506.01928",
+    "pdf": "assets/pdf/biazetto-2025-adaptive.pdf",
+    "bibtex": "@misc{biazetto2025adaptive,\n  author = {Biazetto, Paulo and Park, Lina},\n  title  = {Adaptive Boundary Control of Parabolic PDEs with Unknown Diffusivity},\n  year   = {2025},\n  eprint = {2506.01928},\n  archivePrefix = {arXiv},\n  primaryClass  = {math.OC}\n}",
+    "abstract": "We propose an adaptive boundary controller that simultaneously estimates an unknown diffusion coefficient and stabilizes the plant, with a Lyapunov argument that couples parameter estimation error and state energy."
+  },
+  {
+    "type": "Preprint",
+    "title": "Constraint-Tightening MPC for Conservation Laws with Moving Bottlenecks",
+    "authors": "P. Biazetto, T. Nakamura",
+    "venue": "arXiv:2504.11203",
+    "year": 2025,
+    "doi": "10.0000/arxiv.2504.11203",
+    "pdf": "assets/pdf/biazetto-2025-moving-bottleneck.pdf",
+    "bibtex": "@misc{biazetto2025moving,\n  author = {Biazetto, Paulo and Nakamura, Taro},\n  title  = {Constraint-Tightening MPC for Conservation Laws with Moving Bottlenecks},\n  year   = {2025},\n  eprint = {2504.11203},\n  archivePrefix = {arXiv},\n  primaryClass  = {eess.SY}\n}",
+    "abstract": "We extend constraint-tightening predictive control to scalar conservation laws coupled with a moving interior bottleneck, deriving the shock-velocity sensitivity terms needed for a consistent linearization of the optimal control problem."
+  },
+  {
+    "type": "Journal",
+    "title": "Input-to-State Stability of Semilinear Parabolic Equations with Boundary Disturbances",
+    "authors": "P. Biazetto, R. Okafor, H. Vogel",
+    "venue": "Systems & Control Letters",
+    "year": 2022,
+    "doi": "10.0000/scl.2022.105210",
+    "pdf": "assets/pdf/biazetto-2022-iss.pdf",
+    "bibtex": "@article{biazetto2022iss,\n  author  = {Biazetto, Paulo and Okafor, Rita and Vogel, Hannah},\n  title   = {Input-to-State Stability of Semilinear Parabolic Equations with Boundary Disturbances},\n  journal = {Systems \\& Control Letters},\n  year    = {2022},\n  volume  = {164},\n  pages   = {105210},\n  doi     = {10.0000/scl.2022.105210}\n}",
+    "abstract": "Sufficient conditions are given for input-to-state stability of semilinear parabolic equations subject to disturbances entering through the boundary, using monotonicity arguments and a De Giorgi iteration."
+  },
+  {
+    "type": "Conference",
+    "title": "Real-Time Implementation of Backstepping Controllers on Embedded Hardware",
+    "authors": "P. Biazetto, S. Bianchi",
+    "venue": "European Control Conference (ECC)",
+    "year": 2022,
+    "doi": "10.0000/ecc.2022.330118",
+    "pdf": "assets/pdf/biazetto-2022-embedded.pdf",
+    "bibtex": "@inproceedings{biazetto2022embedded,\n  author    = {Biazetto, Paulo and Bianchi, Sofia},\n  title     = {Real-Time Implementation of Backstepping Controllers on Embedded Hardware},\n  booktitle = {Proc. European Control Conference (ECC)},\n  year      = {2022},\n  pages     = {1456--1462},\n  doi       = {10.0000/ecc.2022.330118}\n}",
+    "abstract": "We report a fixed-point embedded implementation of a backstepping boundary controller for a heat-exchanger testbed, analyzing the trade-off between kernel discretization resolution and closed-loop performance."
+  }
+]

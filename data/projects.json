@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Boundary Control Kernels for Coupled Reaction\u2013Diffusion Systems",
+    "description": "A unified backstepping framework for exponentially stabilizing coupled parabolic PDEs with spatially varying coefficients. The project delivers well-posedness proofs for the control-kernel equations together with an open-source solver and reproducible numerical benchmarks.",
+    "status": "Active",
+    "image": "assets/images/project-boundary.svg",
+    "github": "https://github.com/example/boundary-kernels",
+    "paper": "https://doi.org/10.0000/automatica.2025.0142",
+    "website": "",
+    "funding": "National Research Foundation, Grant CTRL-2023-117",
+    "collaborators": ["Claire Laurent (CNRS)", "Andr\u00e9 Ferreira (IST Lisbon)"]
+  },
+  {
+    "title": "Data-Driven Stabilization of Thermoacoustic Instabilities",
+    "description": "Reduced-order modeling and control of a Rijke-tube thermoacoustic system using dynamic mode decomposition with control. The work establishes practical exponential stability on a finite-dimensional product space and validates the controller on an experimental rig.",
+    "status": "Active",
+    "image": "assets/images/project-thermoacoustic.svg",
+    "github": "https://github.com/example/thermoacoustic-romc",
+    "paper": "https://doi.org/10.0000/tac.2025.3398765",
+    "website": "",
+    "funding": "Energy Systems Initiative, Seed Grant 2024",
+    "collaborators": ["Rita Okafor (TU Delft)"]
+  },
+  {
+    "title": "Distributionally Robust Predictive Control of Traffic Networks",
+    "description": "Model predictive control for freeway traffic based on the Lighthill\u2013Whitham\u2013Richards conservation law, extended with a moving-bottleneck reparameterization and Wasserstein constraint tightening. A Python implementation solves the online quadratic program with OSQP.",
+    "status": "Active",
+    "image": "assets/images/project-traffic.svg",
+    "github": "https://github.com/example/dr-traffic-mpc",
+    "paper": "https://doi.org/10.0000/sicon.2024.118822",
+    "website": "",
+    "funding": "Mobility & Transport Lab",
+    "collaborators": ["Sofia Bianchi (Politecnico di Milano)", "Taro Nakamura (Kyoto University)"]
+  },
+  {
+    "title": "Neural Operators for Real-Time Backstepping",
+    "description": "Approximating backstepping control kernels with neural operators to enable real-time boundary control of distributed-parameter systems, with stability margins certified a posteriori. Includes a benchmark suite and pretrained operator weights.",
+    "status": "Completed",
+    "image": "assets/images/project-neural.svg",
+    "github": "https://github.com/example/neural-backstepping",
+    "paper": "https://doi.org/10.0000/acc.2024.778120",
+    "website": "",
+    "funding": "",
+    "collaborators": ["Lina Park (KAIST)", "Rita Okafor (TU Delft)"]
+  }
+]

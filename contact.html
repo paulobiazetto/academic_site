@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact — Paulo Biazetto</title>
+  <meta name="description" content="Get in touch with Paulo Biazetto — email, LinkedIn, GitHub, Google Scholar, and ORCID." />
+  <meta name="keywords" content="Paulo Biazetto, contact, email, LinkedIn, ORCID, Google Scholar" />
+  <meta name="author" content="Paulo Biazetto" />
+  <link rel="canonical" href="https://example.edu/~paulo.biazetto/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact — Paulo Biazetto" />
+  <meta property="og:description" content="Email, LinkedIn, GitHub, Google Scholar, and ORCID." />
+  <meta property="og:url" content="https://example.edu/~paulo.biazetto/contact.html" />
+  <meta property="og:image" content="assets/profile/profile.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("site-theme");
+        var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (t === "dark" || (t === null && prefersDark)) document.documentElement.setAttribute("data-theme", "dark");
+        var a = localStorage.getItem("site-accent");
+        if (a) document.documentElement.style.setProperty("--color-primary", a);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body data-page="contact">
+  <span id="top"></span>
+  <a class="skip-link" href="#contact-main">Skip to main content</a>
+
+  <header class="site-header" id="site-header"></header>
+
+  <main class="page">
+    <div class="container container--narrow" id="contact-main">
+      <div class="page-header">
+        <p class="eyebrow">Contact</p>
+        <h1 class="page-title">Get in touch</h1>
+        <p class="section__intro">
+          I welcome questions about my research, potential collaborations, and
+          inquiries from prospective students. The best way to reach me is by email.
+        </p>
+      </div>
+
+      <!-- Items are rendered from the shared CONTACTS config by script.js -->
+      <ul class="contact-list" data-contacts></ul>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

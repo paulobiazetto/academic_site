@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="800" viewBox="0 0 640 800" role="img">
+<defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#0B5563"/><stop offset="1" stop-color="#0E3A43"/></linearGradient></defs>
+<rect width="640" height="800" fill="#EFEEE8"/>
+<circle cx="320" cy="300" r="150" fill="url(#pg)"/>
+<rect x="150" y="470" width="340" height="260" rx="170" fill="url(#pg)"/>
+<text x="320" y="332" font-family="Georgia, serif" font-size="150" fill="#FAFAF7" text-anchor="middle" opacity="0.92">PB</text>
+</svg>
