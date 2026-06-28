@@ -459,22 +459,26 @@ h1, h2, h3, h4 {
 /* Social icon row. */
 .socials { display: flex; flex-wrap: wrap; gap: var(--spacing-xs); margin-top: var(--spacing-xs); }
 
-/* Affiliated institutions: 2×2 grid. The gap matches the spacing used in
-   Contact information and LinkedIn activity. Each logo fills its cell and
-   keeps its own aspect ratio (object-fit: contain, no stretching). */
+/* Affiliated institutions: packed like LinkedIn activity. column-count: 2
+   flows the logos top-to-bottom in each column, so as new logos are added
+   they fill the gaps in the first column before spilling into the second.
+   The gap matches the spacing used in Contact information / LinkedIn. */
 .home-university {
   margin-top: var(--spacing-sm);
   padding-top: var(--spacing-md);
   border-top: 1px solid var(--color-border);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: calc(var(--spacing-md) * 0.7);
+  column-count: 2;
+  column-gap: calc(var(--spacing-md) * 0.7);
+  column-fill: auto;
 }
 .home-university__logo {
   width: 100%;
   height: auto;
   object-fit: contain;
-  display: block;
+  display: inline-block;
+  vertical-align: top;
+  break-inside: avoid;
+  margin-bottom: calc(var(--spacing-md) * 0.7);
 }
 .social {
   display: grid; place-items: center;
