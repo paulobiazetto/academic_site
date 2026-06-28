@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img">
+<rect width="640" height="360" fill="#FAFAF7"/>
+<rect x="0.5" y="0.5" width="639" height="359" fill="none" stroke="#E6E5DF"/>
+
+<!-- Neural network: three layers of nodes, fully connected, standing in
+     for the "learning" half of the project. -->
+<g id="nn" opacity="0.95">
+  <!-- input layer (3 nodes) -->
+  <circle cx="160" cy="120" r="7" fill="none" stroke="#16181C" stroke-width="2"/>
+  <circle cx="160" cy="160" r="7" fill="none" stroke="#16181C" stroke-width="2"/>
+  <circle cx="160" cy="200" r="7" fill="none" stroke="#16181C" stroke-width="2"/>
+  <!-- hidden layer (4 nodes) -->
+  <circle cx="245" cy="100" r="7" fill="none" stroke="#0B5563" stroke-width="2"/>
+  <circle cx="245" cy="140" r="7" fill="none" stroke="#0B5563" stroke-width="2"/>
+  <circle cx="245" cy="180" r="7" fill="none" stroke="#0B5563" stroke-width="2"/>
+  <circle cx="245" cy="220" r="7" fill="none" stroke="#0B5563" stroke-width="2"/>
+  <!-- output layer (2 nodes) -->
+  <circle cx="330" cy="140" r="7" fill="none" stroke="#3E8693" stroke-width="2"/>
+  <circle cx="330" cy="180" r="7" fill="none" stroke="#3E8693" stroke-width="2"/>
+
+  <!-- connections, input -> hidden -->
+  <g stroke="#9AA0A6" stroke-width="1" opacity="0.55">
+    <line x1="167" y1="120" x2="238" y2="100"/>
+    <line x1="167" y1="120" x2="238" y2="140"/>
+    <line x1="167" y1="120" x2="238" y2="180"/>
+    <line x1="167" y1="160" x2="238" y2="100"/>
+    <line x1="167" y1="160" x2="238" y2="140"/>
+    <line x1="167" y1="160" x2="238" y2="180"/>
+    <line x1="167" y1="160" x2="238" y2="220"/>
+    <line x1="167" y1="200" x2="238" y2="140"/>
+    <line x1="167" y1="200" x2="238" y2="180"/>
+    <line x1="167" y1="200" x2="238" y2="220"/>
+  </g>
+  <!-- connections, hidden -> output -->
+  <g stroke="#9AA0A6" stroke-width="1" opacity="0.55">
+    <line x1="252" y1="100" x2="323" y2="140"/>
+    <line x1="252" y1="140" x2="323" y2="140"/>
+    <line x1="252" y1="180" x2="323" y2="140"/>
+    <line x1="252" y1="140" x2="323" y2="180"/>
+    <line x1="252" y1="180" x2="323" y2="180"/>
+    <line x1="252" y1="220" x2="323" y2="180"/>
+  </g>
+</g>
+
+<!-- Arrow from the network's output into a classic controller block,
+     fusing the learned policy with the control loop. -->
+<line x1="337" y1="160" x2="385" y2="160" stroke="#16181C" stroke-width="2"/>
+<polygon points="385,160 374,154 374,166" fill="#16181C"/>
+<rect x="385" y="125" width="90" height="70" rx="6" fill="none" stroke="#16181C" stroke-width="2"/>
+<text x="430" y="166" font-family="monospace" font-size="20" fill="#16181C" text-anchor="middle">K</text>
+
+<!-- Plant block -->
+<rect x="385" y="230" width="90" height="60" rx="6" fill="none" stroke="#0B5563" stroke-width="2"/>
+<text x="430" y="266" font-family="monospace" font-size="20" fill="#0B5563" text-anchor="middle">P</text>
+
+<!-- Closed loop: controller -> plant -> feedback back to the network input -->
+<line x1="430" y1="195" x2="430" y2="228" stroke="#16181C" stroke-width="2"/>
+<polygon points="430,228 424,217 436,217" fill="#16181C"/>
+<path d="M385 260 H 100 V 160 H 153" fill="none" stroke="#9AA0A6" stroke-width="2"/>
+<polygon points="153,160 142,154 142,166" fill="#9AA0A6"/>
+
+<!-- Small "loss" / training-signal marker on the feedback path -->
+<circle cx="100" cy="210" r="4" fill="#3E8693"/>
+<text x="115" y="214" font-family="monospace" font-size="13" fill="#3E8693">data</text>
+</svg>

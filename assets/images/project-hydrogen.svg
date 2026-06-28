@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img">
+<rect width="640" height="360" fill="#FAFAF7"/>
+<rect x="0.5" y="0.5" width="639" height="359" fill="none" stroke="#E6E5DF"/>
+<!-- Electrolysis cell: two electrodes with rising bubble trains (H2 production) -->
+<rect x="230" y="90" width="180" height="200" rx="6" fill="none" stroke="#16181C" stroke-width="2" opacity="0.55"/>
+<line x1="320" y1="90" x2="320" y2="290" stroke="#E6E5DF" stroke-width="1.4"/>
+<!-- Electrodes -->
+<rect x="258" y="110" width="10" height="160" fill="#0B5563" opacity="0.85"/>
+<rect x="372" y="110" width="10" height="160" fill="#3E8693" opacity="0.85"/>
+<!-- Bubble trains rising from each electrode -->
+<circle cx="263" cy="240" r="5" fill="none" stroke="#0B5563" stroke-width="1.6" opacity="0.30"/>
+<circle cx="266" cy="210" r="6" fill="none" stroke="#0B5563" stroke-width="1.6" opacity="0.42"/>
+<circle cx="262" cy="176" r="7" fill="none" stroke="#0B5563" stroke-width="1.6" opacity="0.56"/>
+<circle cx="267" cy="140" r="5.5" fill="none" stroke="#0B5563" stroke-width="1.6" opacity="0.70"/>
+<circle cx="263" cy="108" r="6.5" fill="none" stroke="#0B5563" stroke-width="1.6" opacity="0.85"/>
+<circle cx="377" cy="248" r="4.5" fill="none" stroke="#3E8693" stroke-width="1.6" opacity="0.30"/>
+<circle cx="380" cy="214" r="5.5" fill="none" stroke="#3E8693" stroke-width="1.6" opacity="0.44"/>
+<circle cx="376" cy="180" r="6.5" fill="none" stroke="#3E8693" stroke-width="1.6" opacity="0.58"/>
+<circle cx="381" cy="146" r="5" fill="none" stroke="#3E8693" stroke-width="1.6" opacity="0.72"/>
+<circle cx="377" cy="112" r="6" fill="none" stroke="#3E8693" stroke-width="1.6" opacity="0.86"/>
+<!-- H2 molecule motif floating above the cell -->
+<g opacity="0.92">
+  <circle cx="300" cy="56" r="9" fill="none" stroke="#16181C" stroke-width="2"/>
+  <circle cx="328" cy="56" r="9" fill="none" stroke="#16181C" stroke-width="2"/>
+  <line x1="309" y1="56" x2="319" y2="56" stroke="#16181C" stroke-width="2"/>
+</g>
+<!-- Energy input arrow from the left (renewable feed) -->
+<path d="M120 190 L210 190" stroke="#0B5563" stroke-width="2" opacity="0.5"/>
+<path d="M198 182 L212 190 L198 198" fill="none" stroke="#0B5563" stroke-width="2" opacity="0.5"/>
+<path d="M120 170 L120 210" stroke="#0B5563" stroke-width="2" opacity="0.35"/>
+<path d="M112 178 L120 170 L128 178 M112 202 L120 210 L128 202" fill="none" stroke="#0B5563" stroke-width="1.6" opacity="0.35"/>
+<!-- Storage tank on the right -->
+<rect x="450" y="150" width="60" height="110" rx="10" fill="none" stroke="#16181C" stroke-width="2" opacity="0.55"/>
+<line x1="450" y1="180" x2="510" y2="180" stroke="#16181C" stroke-width="1.4" opacity="0.4"/>
+<path d="M420 190 L448 190" stroke="#3E8693" stroke-width="2" opacity="0.5"/>
+<path d="M438 182 L450 190 L438 198" fill="none" stroke="#3E8693" stroke-width="2" opacity="0.5"/>
+</svg>

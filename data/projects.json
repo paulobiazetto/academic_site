@@ -1,6 +1,6 @@
 [
   {
-    "title": "Boundary Control Kernels for Coupled Reaction\u2013Diffusion Systems",
+    "title": "Boundary Control Kernels for Coupled Reaction–Diffusion Systems",
     "description": "A unified backstepping framework for exponentially stabilizing coupled parabolic PDEs with spatially varying coefficients. The project delivers well-posedness proofs for the control-kernel equations together with an open-source solver and reproducible numerical benchmarks.",
     "status": "Active",
     "image": "assets/images/project-boundary.svg",
@@ -8,7 +8,10 @@
     "paper": "https://doi.org/10.0000/automatica.2025.0142",
     "website": "",
     "funding": "National Research Foundation, Grant CTRL-2023-117",
-    "collaborators": ["Claire Laurent (CNRS)", "Andr\u00e9 Ferreira (IST Lisbon)"]
+    "collaborators": [
+      "Claire Laurent (CNRS)",
+      "André Ferreira (IST Lisbon)"
+    ]
   },
   {
     "title": "Data-Driven Stabilization of Thermoacoustic Instabilities",
@@ -19,18 +22,23 @@
     "paper": "https://doi.org/10.0000/tac.2025.3398765",
     "website": "",
     "funding": "Energy Systems Initiative, Seed Grant 2024",
-    "collaborators": ["Rita Okafor (TU Delft)"]
+    "collaborators": [
+      "Rita Okafor (TU Delft)"
+    ]
   },
   {
     "title": "Distributionally Robust Predictive Control of Traffic Networks",
-    "description": "Model predictive control for freeway traffic based on the Lighthill\u2013Whitham\u2013Richards conservation law, extended with a moving-bottleneck reparameterization and Wasserstein constraint tightening. A Python implementation solves the online quadratic program with OSQP.",
+    "description": "Model predictive control for freeway traffic based on the Lighthill–Whitham–Richards conservation law, extended with a moving-bottleneck reparameterization and Wasserstein constraint tightening. A Python implementation solves the online quadratic program with OSQP.",
     "status": "Active",
     "image": "assets/images/project-traffic.svg",
     "github": "https://github.com/example/dr-traffic-mpc",
     "paper": "https://doi.org/10.0000/sicon.2024.118822",
     "website": "",
     "funding": "Mobility & Transport Lab",
-    "collaborators": ["Sofia Bianchi (Politecnico di Milano)", "Taro Nakamura (Kyoto University)"]
+    "collaborators": [
+      "Sofia Bianchi (Politecnico di Milano)",
+      "Taro Nakamura (Kyoto University)"
+    ]
   },
   {
     "title": "Neural Operators for Real-Time Backstepping",
@@ -41,6 +49,44 @@
     "paper": "https://doi.org/10.0000/acc.2024.778120",
     "website": "",
     "funding": "",
-    "collaborators": ["Lina Park (KAIST)", "Rita Okafor (TU Delft)"]
+    "collaborators": [
+      "Lina Park (KAIST)",
+      "Rita Okafor (TU Delft)"
+    ]
+  },
+  {
+    "title": "Multi-User Laboratory for Green Hydrogen Studies",
+    "description": "A shared experimental and computational facility under the National Institute of Science and Technology in Energy Process Control and Automation, supporting electrolysis modeling, control of hydrogen production cells, and benchmarking of control strategies for green hydrogen systems across partner institutions.",
+    "status": "Active",
+    "image": "assets/images/project-hydrogen.svg",
+    "github": "",
+    "paper": "",
+    "website": "https://www.example.edu/inct-hidrogenio-verde",
+    "funding": "National Institute of Science and Technology in Energy Process Control and Automation (INCT)",
+    "collaborators": [
+      "Partner institutions of the INCT network"
+    ]
+  },
+  {
+    "title": "Learning-Based Optimization and Control for Complex Real-World Systems",
+    "description": "Combining machine learning with model-based control to handle systems that are too complex or uncertain for purely analytical design, including neural-operator approximations of control kernels, learned reduced-order models, and data-driven constraint tightening for predictive control.",
+    "status": "Active",
+    "image": "assets/images/project-learning-control.svg",
+    "github": "",
+    "paper": "",
+    "website": "",
+    "funding": "",
+    "collaborators": []
+  },
+  {
+    "title": "Control and Optimization of Energy Generation, Utilization, and Storage Systems",
+    "description": "Methods for the coordinated control of energy generation, consumption, and storage, with an emphasis on renewable sources such as solar and wind. The project addresses optimal dispatch, storage management, and robustness to the variability inherent to renewable generation.",
+    "status": "Active",
+    "image": "assets/images/project-renewable-energy.svg",
+    "github": "",
+    "paper": "",
+    "website": "",
+    "funding": "",
+    "collaborators": []
   }
 ]

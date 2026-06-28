@@ -1,24 +1,26 @@
 [
   {
-    "embed": "https://www.linkedin.com/feed/update/urn:li:activity:7357115634905735169/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACP6nacBw9aRxYpPaeq9PrLOriov1U8qB2M",
+    "embed": "https://www.linkedin.com/posts/sociedade-brasileira-de-automatica-sba_%C3%A9-com-grande-satisfa%C3%A7%C3%A3o-que-a-sociedade-brasileira-activity-7431717044770787329-1v8n?utm_source=share&utm_medium=member_desktop&rcm=ACoAACP6nacBw9aRxYpPaeq9PrLOriov1U8qB2M",
     "type": "Post",
-    "date": "2025-06-11",
-    "text": "Happy to share that our paper on backstepping boundary stabilization of coupled parabolic PDEs was accepted in Automatica. Grateful to my co-authors!",
-    "link": "https://www.linkedin.com/in/paulobiazetto/",
-    "_note": "Paste a public post link into \"embed\" (e.g. https://www.linkedin.com/feed/update/urn:li:activity:1234567890123456789) to render the live post instead of this text."
+    "date": "2026-02--0",
+    "text": "É com grande satisfação que a Sociedade Brasileira de Automática divulga a Série de Seminários SBA para Promoção da Diversidade Regional em Controle e Automação no Brasil. A Série de Seminários SBA ocorrerá ao longo do ano de 2026, com eventos em diferentes regiões do país. A iniciativa contempla o esforço da SBA para a promoção da diversidade regional em Controle e Automação no Brasil e é fruto de projeto financiado pelo IFAC Activity Fund, contando com apoio institucional formal de comitês técnicos da IFAC (TC 9.2 Systems and Control for Societal Impact e TC 9.4 Control Education)",
+    "link": "https://www.linkedin.com/in/gustavo-artur-de-andrade-89a80355",
+    "_note": ""
   },
   {
-    "embed": "",
+    "embed": "https://www.linkedin.com/posts/sociedade-brasileira-de-automatica-sba_%C3%A9-com-grande-satisfa%C3%A7%C3%A3o-que-a-sociedade-brasileira-activity-7423046873906659328-PSIm?utm_source=share&utm_medium=member_desktop&rcm=ACoAACP6nacBw9aRxYpPaeq9PrLOriov1U8qB2M",
     "type": "Article",
     "date": "2025-05-03",
     "text": "New write-up: what \u201cpractical exponential stability\u201d really means when you move from an infinite-dimensional plant to a data-driven reduced-order model.",
-    "link": "https://www.linkedin.com/in/paulobiazetto/"
+    "link": "https://www.linkedin.com/in/gustavo-artur-de-andrade-89a80355",
+    "_note": ""
   },
   {
     "embed": "",
     "type": "Share",
     "date": "2025-03-19",
     "text": "Preprint out on adaptive boundary control of parabolic PDEs with unknown diffusivity \u2014 comments welcome.",
-    "link": "https://www.linkedin.com/in/paulobiazetto/"
+    "link": "https://www.linkedin.com/in/gustavo-artur-de-andrade-89a80355",
+    "_note": ""
   }
 ]

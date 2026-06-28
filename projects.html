@@ -22,17 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
-  <script>
-    (function () {
-      try {
-        var t = localStorage.getItem("site-theme");
-        var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-        if (t === "dark" || (t === null && prefersDark)) document.documentElement.setAttribute("data-theme", "dark");
-        var a = localStorage.getItem("site-accent");
-        if (a) document.documentElement.style.setProperty("--color-primary", a);
-      } catch (e) {}
-    })();
-  </script>
+  <script src="theme-init.js"></script>
 </head>
 
 <body data-page="projects">

@@ -33,14 +33,33 @@
 
 // Navigation (order shown in the header). "page" must match the
 // data-page attribute on each page's <body> for active highlighting.
+//
+// MODULARITY: set enabled:false to remove an item from the menu without
+// touching any other file. The corresponding HTML page keeps existing on
+// disk, but visiting it directly will bounce to Home (see guardPage() —
+// each page calls it on load) — so a disabled section never sits there
+// half-broken or gets indexed while "off". Re-enable any time by flipping
+// it back to true. Reorder items by reordering this array.
 const PAGES = [
-  { page: "home", label: "Home", href: "index.html" },
-  { page: "cv", label: "CV", href: "cv.html" },
-  { page: "projects", label: "Projects", href: "projects.html" },
-  { page: "publications", label: "Publications", href: "publications.html" },
-  { page: "news", label: "News", href: "news.html" },
-  { page: "contact", label: "Contact", href: "contact.html" },
+  { page: "home", label: "Home", href: "index.html", enabled: true },
+  { page: "cv", label: "CV", href: "cv.html", enabled: true },
+  { page: "projects", label: "Projects", href: "projects.html", enabled: true },
+  { page: "publications", label: "Publications", href: "publications.html", enabled: true },
+  { page: "orientations", label: "Orientations", href: "orientations.html", enabled: true },
+  { page: "news", label: "News", href: "news.html", enabled: true },
+  { page: "contact", label: "Contact", href: "contact.html", enabled: true },
 ];
+
+// Home page sections (About is always shown — it's the core bio).
+// Same idea as PAGES: flip enabled:false to hide a block on Home without
+// editing index.html. Keys must match the data-section attribute on the
+// corresponding <section> in index.html.
+const HOME_SECTIONS = {
+  position: true,
+  interests: true,
+  contact: true,
+  linkedin: true,
+};
 
 // Accent presets. All are mid-to-dark tones that keep white text legible.
 const ACCENTS = [
@@ -83,9 +102,10 @@ const LINKEDIN = {
 // Contact page, and as the small social icons in the Home sidebar).
 const CONTACTS = [
   { label: "Email", value: "paulo.biazetto@example.edu", href: "mailto:paulo.biazetto@example.edu", icon: "email" },
-  { label: "LinkedIn", value: "linkedin.com/in/paulobiazetto", href: "https://www.linkedin.com/in/paulobiazetto/", icon: "linkedin" },
-  { label: "GitHub", value: "github.com/example", href: "https://github.com/example", icon: "github" },
-  { label: "Google Scholar", value: "scholar.google.com", href: "https://scholar.google.com/citations?user=example", icon: "scholar" },
+  { label: "LinkedIn", value: "linkedin.com/in/gustavo-artur-de-andrade", href: "https://www.linkedin.com/in/gustavo-artur-de-andrade-89a80355/", icon: "linkedin" },
+  { label: "Lattes", value: "lattes.cnpq.br", href: "http://lattes.cnpq.br/9824493377082772", icon: "lattes" },
+  { label: "GitHub", value: "github.com/", href: "https://github.com/example", icon: "github" },
+  { label: "Google Scholar", value: "scholar.google.com", href: "https://scholar.google.com.br/citations?user=RXSFJBUAAAAJ&hl=pt-BR&oi=ao", icon: "scholar" },
   { label: "ORCID", value: "0000-0000-0000-0000", href: "https://orcid.org/0000-0000-0000-0000", icon: "orcid" },
 ];
 
@@ -94,9 +114,10 @@ const DATA = {
   publications: "data/publications.json",
   projects: "data/projects.json",
   news: "data/news.json",
+  orientations: "data/orientations.json",
 };
 
-const PUB_TYPE_ORDER = ["Journal", "Conference", "Book Chapter", "Preprint"];
+const PUB_TYPE_ORDER = ["Journal", "Conference", "Book Chapter", "Preprint", "Dissertation/Thesis"];
 
 // Keys used for persisting appearance choices.
 const STORAGE = { theme: "site-theme", accent: "site-accent" };
@@ -215,9 +236,9 @@ function buildHeader() {
     createEl("span", { class: "nav__brand-name", text: "Paulo Biazetto" }),
   ]);
 
-  // Primary links
+  // Primary links — only pages explicitly enabled in PAGES appear here.
   const menu = createEl("ul", { class: "nav__menu", id: "nav-menu" });
-  PAGES.forEach((p) => {
+  PAGES.filter((p) => p.enabled).forEach((p) => {
     menu.append(
       createEl("li", {}, [
         createEl("a", {
@@ -427,6 +448,7 @@ const BRAND_ICONS = {
   github: '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2A10 10 0 0 0 8.84 21.5c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85l-.01 2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>',
   scholar: '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2 1 8.5l11 6.5 9-5.32V16h2V8.5L12 2Z"/><path d="M5 13.4V17c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.6l-7 4.14-7-4.14Z"/></svg>',
   orcid: '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20ZM8.2 7.1a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM7.3 10.6h1.8v6.9H7.3v-6.9Zm3.4 0h3.3c1.9 0 3.5 1.2 3.5 3.45 0 2.25-1.6 3.45-3.5 3.45h-3.3v-6.9Zm1.8 1.6v3.7h1.4c1.2 0 1.9-.74 1.9-1.85 0-1.1-.7-1.85-1.9-1.85h-1.4Z"/></svg>',
+  lattes: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.5h9l3 3V20a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4.5 20V4A1.5 1.5 0 0 1 6 2.5Z"/><path d="M14.5 2.5V6h3.5"/><circle cx="9.5" cy="11" r="1.6"/><path d="M8 16.2c.4-1.4 1.6-2.2 2.9-2.1 1.1 0 2 .6 2.6 1.6M13.3 9.8h3.2M13.3 12.6h3.2"/></svg>',
 };
 
 // Fill any [data-contacts] container with the full contact cards.
@@ -538,7 +560,31 @@ function buildProjectCard(project, index) {
     toggle, details,
   ]);
 
-  return createEl("article", { class: "project" }, [media, body]);
+  const card = createEl("article", { class: "project", tabindex: project.website ? "0" : null }, [media, body]);
+
+  // Whole-card click-through to the project's website, when one is set.
+  // Projects without a "website" stay non-interactive at the card level —
+  // nothing happens on click, as requested. Clicks on the Details toggle
+  // or on any link inside the card (GitHub, Paper, Website button) must
+  // NOT also trigger this, so they're excluded explicitly.
+  if (project.website) {
+    card.classList.add("project--linked");
+    card.setAttribute("role", "link");
+    card.setAttribute("aria-label", `${project.title} — open project website`);
+    const go = () => window.open(project.website, "_blank", "noopener,noreferrer");
+    card.addEventListener("click", (e) => {
+      if (e.target.closest("a, button")) return; // let inner controls behave normally
+      go();
+    });
+    card.addEventListener("keydown", (e) => {
+      if ((e.key === "Enter" || e.key === " ") && !e.target.closest("a, button")) {
+        e.preventDefault();
+        go();
+      }
+    });
+  }
+
+  return card;
 }
 
 async function renderProjects() {
@@ -586,6 +632,59 @@ async function renderNews() {
 
 
 /* ===================================================================
+   RENDER: ORIENTATIONS (Master's & PhD advisees, grouped by level)
+   =================================================================== */
+function buildOrientationItem(entry) {
+  const nameNode = entry.url
+    ? createEl("a", { class: "orient-item__name", href: entry.url, target: "_blank", rel: "noopener noreferrer", text: entry.name })
+    : createEl("span", { class: "orient-item__name orient-item__name--plain", text: entry.name });
+
+  return createEl("li", { class: "orient-item" }, [
+    createEl("div", { class: "orient-item__head" }, [
+      nameNode,
+      entry.status ? createEl("span", { class: "orient-item__status", "data-status": entry.status, text: entry.status }) : null,
+    ]),
+    entry.started ? createEl("p", { class: "orient-item__meta", text: `Since ${entry.started}` }) : null,
+    entry.description ? createEl("p", { class: "orient-item__desc", text: entry.description }) : null,
+  ]);
+}
+
+async function renderOrientations() {
+  const phdList = $("#orientations-phd");
+  const masterList = $("#orientations-master");
+  if (!phdList && !masterList) return; // only on the Orientations page
+
+  try {
+    const entries = await fetchJSON(DATA.orientations);
+
+    const phd = entries.filter((e) => e.level === "PhD");
+    const master = entries.filter((e) => e.level === "Master");
+
+    if (phdList) {
+      phdList.innerHTML = "";
+      const frag = document.createDocumentFragment();
+      phd.forEach((e) => frag.append(buildOrientationItem(e)));
+      phdList.append(frag);
+      const empty = $("#orientations-phd-empty");
+      if (empty) empty.hidden = phd.length !== 0;
+    }
+    if (masterList) {
+      masterList.innerHTML = "";
+      const frag = document.createDocumentFragment();
+      master.forEach((e) => frag.append(buildOrientationItem(e)));
+      masterList.append(frag);
+      const empty = $("#orientations-master-empty");
+      if (empty) empty.hidden = master.length !== 0;
+    }
+    observeReveal($$(".orient-item", document));
+  } catch (err) {
+    console.error(err);
+    if (phdList) renderError(phdList, "Orientations could not be loaded. If you opened the file directly, serve the folder over HTTP (for example: python3 -m http.server).");
+  }
+}
+
+
+/* ===================================================================
    RENDER: PUBLICATIONS (list + search + filter + counter)
    =================================================================== */
 const pubState = { all: [], query: "", type: "All" };
@@ -612,8 +711,26 @@ function buildPublicationItem(pub, query) {
     const href = pub.doi.startsWith("http") ? pub.doi : `https://doi.org/${pub.doi}`;
     actions.push(createEl("a", { class: "pub-action", href, target: "_blank", rel: "noopener noreferrer", text: "DOI" }));
   }
+
+  // "pdf" is dual-purpose, by design — see the note in data/publications.json:
+  //   • a relative path (assets/pdf/....pdf)  → local file, button reads "PDF"
+  //   • a full URL (https://...)              → external page (publisher,
+  //                                              preprint server, etc.), button
+  //                                              reads "Article ↗" instead.
+  //   • left empty                            → no PDF/article button at all,
+  //                                              unless "doi" above already
+  //                                              covers it.
+  // This avoids a second near-duplicate field: most entries that lack a PDF
+  // already have a DOI pointing at the journal page.
   if (pub.pdf) {
-    actions.push(createEl("a", { class: "pub-action", href: pub.pdf, target: "_blank", rel: "noopener noreferrer", text: "PDF" }));
+    const isExternal = /^https?:\/\//i.test(pub.pdf);
+    actions.push(createEl("a", {
+      class: "pub-action",
+      href: pub.pdf,
+      target: "_blank",
+      rel: "noopener noreferrer",
+      text: isExternal ? "Article ↗" : "PDF",
+    }));
   }
 
   let abstractReveal = null;
@@ -702,7 +819,9 @@ async function renderPublications() {
   const list = $("#publication-list");
   if (!list) return;
   try {
-    const pubs = await fetchJSON(DATA.publications);
+    const raw = await fetchJSON(DATA.publications);
+    // Skip documentation-only entries (e.g. a leading "_README" note).
+    const pubs = raw.filter((p) => p.title);
     pubs.sort((a, b) => Number(b.year) - Number(a.year));
     pubState.all = pubs;
     buildPublicationFilters();
@@ -736,28 +855,34 @@ async function renderPublications() {
    so it always renders and stays aligned with the block.
    =================================================================== */
 
-// Build the always-rendered, self-styled profile card.
-function renderLinkedInProfile() {
-  const host = $("#linkedin-profile");
-  if (!host) return;
-  host.innerHTML = "";
-
+// Build the profile block as a feed item (.li-post.li-post--profile) so it
+// shares the same frame and the same auto-fill grid as the posts. It is
+// prepended to the feed in renderLinkedInPosts().
+function buildLinkedInProfilePost() {
   const p = LINKEDIN.profileCard;
-  const card = createEl("div", { class: "li-card" }, [
-    createEl("div", { class: "li-card__top" }, [
-      createEl("img", { class: "li-card__avatar", src: p.avatar, alt: `${p.name} profile photo`, width: "56", height: "56" }),
-      createEl("span", { class: "li-card__brand", "aria-hidden": "true", html: BRAND_ICONS.linkedin }),
-    ]),
-    createEl("p", { class: "li-card__name", text: p.name }),
-    p.headline ? createEl("p", { class: "li-card__headline", text: p.headline }) : null,
-    p.location ? createEl("p", { class: "li-card__location", text: p.location }) : null,
+
+  const meta = createEl("div", { class: "li-post__meta" }, [
+    createEl("span", { class: "li-post__type", text: "Perfil" }),
+  ]);
+
+  const top = createEl("div", { class: "li-post__profile-top" }, [
+    createEl("img", { class: "li-post__avatar", src: p.avatar, alt: `${p.name} profile photo`, width: "56", height: "56" }),
+    createEl("span", { class: "li-post__brand", "aria-hidden": "true", html: BRAND_ICONS.linkedin }),
+  ]);
+
+  const kids = [
+    meta,
+    top,
+    createEl("p", { class: "li-post__name", text: p.name }),
+    p.headline ? createEl("p", { class: "li-post__headline", text: p.headline }) : null,
+    p.location ? createEl("p", { class: "li-post__location", text: p.location }) : null,
     createEl("a", {
-      class: "button button--primary button--sm li-card__cta",
+      class: "button button--primary button--sm li-post__cta",
       href: LINKEDIN.profileUrl, target: "_blank", rel: "noopener noreferrer",
       text: "View profile on LinkedIn",
     }),
-  ]);
-  host.append(card);
+  ];
+  return createEl("article", { class: "li-post li-post--profile" }, kids);
 }
 
 // Normalize an external feed (JSON array, JSON Feed, or RSS/Atom XML).
@@ -853,6 +978,9 @@ function renderLinkedInPosts(items) {
   host.innerHTML = "";
 
   const frag = document.createDocumentFragment();
+  // Profile is the first .li-post in the feed so the auto-fill grid
+  // distributes it together with the other posts.
+  frag.append(buildLinkedInProfilePost());
   items.slice(0, 5).forEach((post) => frag.append(buildLinkedInPost(post)));
   host.append(frag);
 
@@ -873,8 +1001,6 @@ async function renderLinkedIn() {
   const feedHost = $("#linkedin-feed");
   if (!feedHost) return; // only on the Home page
 
-  renderLinkedInProfile();
-
   try {
     if (LINKEDIN.feedUrl) {
       // Automatic mode: fetch the configured feed (RSS or JSON).
@@ -884,7 +1010,8 @@ async function renderLinkedIn() {
       renderLinkedInPosts(parseFeed(text));
     } else {
       // Manual mode: read curated highlights.
-      const items = await fetchJSON(LINKEDIN.fallbackData);
+      const rawItems = await fetchJSON(LINKEDIN.fallbackData);
+      const items = rawItems.filter((it) => it.text || it.embed);
       items.sort((a, b) => new Date(b.date) - new Date(a.date));
       renderLinkedInPosts(items);
     }
@@ -917,10 +1044,39 @@ function initStaticReveals() {
 }
 
 
+// Hide any Home section toggled off in HOME_SECTIONS. Runs only on Home
+// (sections with [data-section] simply don't exist on other pages).
+function applyHomeSections() {
+  for (const [key, enabled] of Object.entries(HOME_SECTIONS)) {
+    if (enabled) continue;
+    document.querySelectorAll(`[data-section="${key}"]`).forEach((el) => el.remove());
+  }
+}
+
+// If the current page was disabled in PAGES (enabled:false) or isn't
+// listed there at all, bounce to Home. This is what makes a disabled
+// page truly "off" rather than just hidden from the menu: it can't be
+// browsed to directly and won't sit there half-configured.
+// Returns true if the page is fine to render, false if it just redirected.
+function guardPage() {
+  const current = document.body.dataset.page || "";
+  if (current === "home") return true; // Home is never disableable from here
+  const entry = PAGES.find((p) => p.page === current);
+  if (entry && entry.enabled) return true;
+  window.location.replace("index.html");
+  return false;
+}
+
 /* ===================================================================
    BOOTSTRAP
    =================================================================== */
 function init() {
+  // A disabled page redirects immediately; stop here so nothing else runs.
+  if (!guardPage()) return;
+
+  // Remove any Home sections toggled off (no-op on other pages).
+  applyHomeSections();
+
   // Enable reveal animations only when JS runs and motion is allowed.
   const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!reduceMotion) document.documentElement.classList.add("js-anim");
@@ -936,6 +1092,7 @@ function init() {
   renderSocials();
   renderProjects();
   renderPublications();
+  renderOrientations();
   renderNews();
   renderLinkedIn();
 

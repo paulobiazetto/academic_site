@@ -29,20 +29,8 @@
   <link rel="stylesheet" href="style.css" />
 
   <!-- Apply saved theme/accent BEFORE first paint to avoid a flash.
-       This tiny script must stay inline in <head>. -->
-  <script>
-    (function () {
-      try {
-        var t = localStorage.getItem("site-theme");
-        var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-        if (t === "dark" || (t === null && prefersDark)) {
-          document.documentElement.setAttribute("data-theme", "dark");
-        }
-        var a = localStorage.getItem("site-accent");
-        if (a) document.documentElement.style.setProperty("--color-primary", a);
-      } catch (e) {}
-    })();
-  </script>
+       Shared logic lives in theme-init.js (must stay synchronous in <head>). -->
+  <script src="theme-init.js"></script>
 </head>
 
 <body data-page="home">
@@ -71,6 +59,13 @@
           </div>
           <!-- Social icons injected from the shared CONTACTS config -->
           <div class="socials" data-socials aria-label="Profiles and contact"></div>
+
+          <!-- University logo. Swap the src for your institution's crest;
+               the box keeps it centered and proportionally scaled (no
+               stretching) regardless of the source image's dimensions. -->
+          <div class="home-university">
+            <img class="home-university__logo" src="assets/profile/university-logo.png" alt="Universidade Federal de Santa Catarina seal" loading="lazy" />
+          </div>
         </aside>
 
         <!-- RIGHT: about, position, interests, contact, linkedin -->
@@ -95,8 +90,8 @@
             </div>
           </section>
 
-          <!-- Position -->
-          <section class="home-block" aria-labelledby="position-heading">
+          <!-- Position (toggle: HOME_SECTIONS.position in script.js) -->
+          <section class="home-block" data-section="position" aria-labelledby="position-heading">
             <h2 class="home-block__heading" id="position-heading">Position</h2>
             <div class="kv">
               <span class="kv__key">2023 — now</span>
@@ -112,8 +107,8 @@
             </div>
           </section>
 
-          <!-- Research interests -->
-          <section class="home-block" aria-labelledby="interests-heading">
+          <!-- Research interests (toggle: HOME_SECTIONS.interests in script.js) -->
+          <section class="home-block" data-section="interests" aria-labelledby="interests-heading">
             <h2 class="home-block__heading" id="interests-heading">Research interests</h2>
             <ul class="tag-list">
               <li class="tag">Boundary control of PDEs</li>
@@ -124,21 +119,20 @@
             </ul>
           </section>
 
-          <!-- LinkedIn activity -->
-          <section class="home-block linkedin" aria-labelledby="linkedin-heading">
-            <h2 class="home-block__heading" id="linkedin-heading">LinkedIn activity</h2>
-            <div class="linkedin__grid">
-              <!-- Native profile card (always rendered, styled to match) -->
-              <div class="linkedin__profile" id="linkedin-profile"></div>
-              <!-- Recent posts (from a feed if configured, else curated highlights) -->
-              <div class="linkedin__feed" id="linkedin-feed"></div>
-            </div>
-          </section>
-
-          <!-- Contact information (shared config) -->
-          <section class="home-block" id="home-contact" aria-labelledby="contact-heading">
+          <!-- Contact information (toggle: HOME_SECTIONS.contact in script.js) -->
+          <section class="home-block" id="home-contact" data-section="contact" aria-labelledby="contact-heading">
             <h2 class="home-block__heading" id="contact-heading">Contact information</h2>
             <ul class="contact-list" data-contacts></ul>
+          </section>
+
+          <!-- LinkedIn activity (toggle: HOME_SECTIONS.linkedin in script.js) -->
+          <section class="home-block linkedin" data-section="linkedin" aria-labelledby="linkedin-heading">
+            <h2 class="home-block__heading" id="linkedin-heading">LinkedIn activity</h2>
+            <div class="linkedin__grid">
+              <!-- Profile block is the first .li-post in the feed; posts fill the
+                   remaining cells of the same auto-fill grid. -->
+              <div class="linkedin__feed" id="linkedin-feed"></div>
+            </div>
           </section>
 
         </div>
