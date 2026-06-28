@@ -1,5 +1,5 @@
 /* ===================================================================
-   Paulo Biazetto — Academic Website (v2)
+   Gustavo Artur de Andrade — Academic Website (v2)
    script.js  (Vanilla JavaScript, ES6+)
 
    One script, loaded on every page. It:
@@ -87,10 +87,10 @@ const DEFAULT_ACCENT = ACCENTS[0].value;
 //   feedUrl     : OPTIONAL RSS/JSON feed that mirrors your posts (see chat).
 //   fallbackData: curated highlights used when feedUrl is empty.
 const LINKEDIN = {
-  profileUrl: "https://www.linkedin.com/in/paulobiazetto/",
+  profileUrl: "https://www.linkedin.com/in/gustavo-artur-de-andrade-89a80355/",
   profileCard: {
-    name: "Paulo Biazetto",
-    headline: "Assistant Professor · Control of distributed-parameter systems",
+    name: "Gustavo Artur de Andrade",
+    headline: "Professor · Control and Automation Engineering",
     location: "Florianópolis, Brazil",
     avatar: "assets/profile/profile.svg",
   },
@@ -101,7 +101,7 @@ const LINKEDIN = {
 // Contact channels (rendered into both the Home contact block and the
 // Contact page, and as the small social icons in the Home sidebar).
 const CONTACTS = [
-  { label: "Email", value: "paulo.biazetto@example.edu", href: "mailto:paulo.biazetto@example.edu", icon: "email" },
+  { label: "Email", value: "gustavo.artur@ufsc.br", href: "mailto:gustavo.artur@ufsc.br", icon: "email" },
   { label: "LinkedIn", value: "linkedin.com/in/gustavo-artur-de-andrade", href: "https://www.linkedin.com/in/gustavo-artur-de-andrade-89a80355/", icon: "linkedin" },
   { label: "Lattes", value: "lattes.cnpq.br", href: "http://lattes.cnpq.br/9824493377082772", icon: "lattes" },
   { label: "GitHub", value: "github.com/", href: "https://github.com/example", icon: "github" },
@@ -233,7 +233,7 @@ function buildHeader() {
   // Brand
   const brand = createEl("a", { class: "nav__brand", href: "index.html", "aria-label": "Home" }, [
     createEl("span", { class: "nav__brand-mark", "aria-hidden": "true", text: "P" }),
-    createEl("span", { class: "nav__brand-name", text: "Paulo Biazetto" }),
+    createEl("span", { class: "nav__brand-name", text: "Gustavo Artur de Andrade" }),
   ]);
 
   // Primary links — only pages explicitly enabled in PAGES appear here.
@@ -302,7 +302,7 @@ function buildFooter() {
   if (!host) return;
   const inner = createEl("div", { class: "container site-footer__inner" }, [
     createEl("p", { class: "site-footer__copy",
-      text: `© ${new Date().getFullYear()} Paulo Biazetto · Department of Applied Mathematics, Example University` }),
+      text: `© ${new Date().getFullYear()} Gustavo Artur de Andrade · Department of Automation and Systems Engineering` }),
     createEl("p", { class: "site-footer__note", html:
       'Built with HTML, CSS, and vanilla JavaScript. <a class="site-footer__top" href="#top">Back to top ↑</a>' }),
   ]);

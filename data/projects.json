@@ -1,5 +1,40 @@
 [
   {
+    "title": "Multi-User Laboratory for Green Hydrogen Studies",
+    "description": "A shared experimental and computational facility under the National Institute of Science and Technology in Energy Process Control and Automation, supporting electrolysis modeling, control of hydrogen production cells, and benchmarking of control strategies for green hydrogen systems across partner institutions.",
+    "status": "Active",
+    "image": "assets/images/project-hydrogen.svg",
+    "github": "",
+    "paper": "",
+    "website": "https://inctenergia.ufsc.br/index.html",
+    "funding": "National Institute of Science and Technology in Energy Process Control and Automation (INCT)",
+    "collaborators": [
+      "Partner institutions of the INCT network"
+    ]
+  },
+  {
+    "title": "Learning-Based Optimization and Control for Complex Real-World Systems",
+    "description": "Combining machine learning with model-based control to handle systems that are too complex or uncertain for purely analytical design, including neural-operator approximations of control kernels, learned reduced-order models, and data-driven constraint tightening for predictive control.",
+    "status": "Active",
+    "image": "assets/images/project-learning-control.svg",
+    "github": "",
+    "paper": "",
+    "website": "",
+    "funding": "",
+    "collaborators": []
+  },
+  {
+    "title": "Control and Optimization of Energy Generation, Utilization, and Storage Systems",
+    "description": "Methods for the coordinated control of energy generation, consumption, and storage, with an emphasis on renewable sources such as solar and wind. The project addresses optimal dispatch, storage management, and robustness to the variability inherent to renewable generation.",
+    "status": "Active",
+    "image": "assets/images/project-renewable-energy.svg",
+    "github": "",
+    "paper": "",
+    "website": "",
+    "funding": "",
+    "collaborators": []
+  },
+  {
     "title": "Boundary Control Kernels for Coupled Reaction–Diffusion Systems",
     "description": "A unified backstepping framework for exponentially stabilizing coupled parabolic PDEs with spatially varying coefficients. The project delivers well-posedness proofs for the control-kernel equations together with an open-source solver and reproducible numerical benchmarks.",
     "status": "Active",
@@ -27,22 +62,8 @@
     ]
   },
   {
-    "title": "Distributionally Robust Predictive Control of Traffic Networks",
-    "description": "Model predictive control for freeway traffic based on the Lighthill–Whitham–Richards conservation law, extended with a moving-bottleneck reparameterization and Wasserstein constraint tightening. A Python implementation solves the online quadratic program with OSQP.",
-    "status": "Active",
-    "image": "assets/images/project-traffic.svg",
-    "github": "https://github.com/example/dr-traffic-mpc",
-    "paper": "https://doi.org/10.0000/sicon.2024.118822",
-    "website": "",
-    "funding": "Mobility & Transport Lab",
-    "collaborators": [
-      "Sofia Bianchi (Politecnico di Milano)",
-      "Taro Nakamura (Kyoto University)"
-    ]
-  },
-  {
-    "title": "Neural Operators for Real-Time Backstepping",
-    "description": "Approximating backstepping control kernels with neural operators to enable real-time boundary control of distributed-parameter systems, with stability margins certified a posteriori. Includes a benchmark suite and pretrained operator weights.",
+    "title": "Real-Time Backstepping",
+    "description": "",
     "status": "Completed",
     "image": "assets/images/project-neural.svg",
     "github": "https://github.com/example/neural-backstepping",
@@ -50,43 +71,8 @@
     "website": "",
     "funding": "",
     "collaborators": [
-      "Lina Park (KAIST)",
-      "Rita Okafor (TU Delft)"
+      "XXX",
+      "YYY"
     ]
-  },
-  {
-    "title": "Multi-User Laboratory for Green Hydrogen Studies",
-    "description": "A shared experimental and computational facility under the National Institute of Science and Technology in Energy Process Control and Automation, supporting electrolysis modeling, control of hydrogen production cells, and benchmarking of control strategies for green hydrogen systems across partner institutions.",
-    "status": "Active",
-    "image": "assets/images/project-hydrogen.svg",
-    "github": "",
-    "paper": "",
-    "website": "https://www.example.edu/inct-hidrogenio-verde",
-    "funding": "National Institute of Science and Technology in Energy Process Control and Automation (INCT)",
-    "collaborators": [
-      "Partner institutions of the INCT network"
-    ]
-  },
-  {
-    "title": "Learning-Based Optimization and Control for Complex Real-World Systems",
-    "description": "Combining machine learning with model-based control to handle systems that are too complex or uncertain for purely analytical design, including neural-operator approximations of control kernels, learned reduced-order models, and data-driven constraint tightening for predictive control.",
-    "status": "Active",
-    "image": "assets/images/project-learning-control.svg",
-    "github": "",
-    "paper": "",
-    "website": "",
-    "funding": "",
-    "collaborators": []
-  },
-  {
-    "title": "Control and Optimization of Energy Generation, Utilization, and Storage Systems",
-    "description": "Methods for the coordinated control of energy generation, consumption, and storage, with an emphasis on renewable sources such as solar and wind. The project addresses optimal dispatch, storage management, and robustness to the variability inherent to renewable generation.",
-    "status": "Active",
-    "image": "assets/images/project-renewable-energy.svg",
-    "github": "",
-    "paper": "",
-    "website": "",
-    "funding": "",
-    "collaborators": []
   }
 ]

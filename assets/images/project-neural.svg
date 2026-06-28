@@ -1,14 +1,109 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img">
-<rect width="640" height="360" fill="#FAFAF7"/>
-<rect x="0.5" y="0.5" width="639" height="359" fill="none" stroke="#E6E5DF"/>
-
-<rect x="120" y="130" width="120" height="80" rx="6" fill="none" stroke="#16181C" stroke-width="2"/>
-<rect x="400" y="130" width="120" height="80" rx="6" fill="none" stroke="#0B5563" stroke-width="2"/>
-<line x1="240" y1="170" x2="400" y2="170" stroke="#16181C" stroke-width="2"/>
-<polygon points="400,170 388,164 388,176" fill="#16181C"/>
-<path d="M 520 170 H 560 V 300 H 80 V 170 H 120" fill="none" stroke="#9AA0A6" stroke-width="2"/>
-<polygon points="120,170 132,164 132,176" fill="#9AA0A6"/>
-<text x="180" y="175" font-family="monospace" font-size="22" fill="#16181C" text-anchor="middle">P</text>
-<text x="460" y="175" font-family="monospace" font-size="22" fill="#0B5563" text-anchor="middle">K</text>
-
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="640"
+   height="360"
+   viewBox="0 0 640 360"
+   role="img"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="project-neural.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="6.6625172"
+     inkscape:cx="420.18653"
+     inkscape:cy="172.75753"
+     inkscape:window-width="1606"
+     inkscape:window-height="963"
+     inkscape:window-x="0"
+     inkscape:window-y="119"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg6" />
+  <rect
+     width="640"
+     height="360"
+     fill="#FAFAF7"
+     id="rect1" />
+  <rect
+     x="0.5"
+     y="0.5"
+     width="639"
+     height="359"
+     fill="none"
+     stroke="#E6E5DF"
+     id="rect2" />
+  <rect
+     x="120"
+     y="130"
+     width="120"
+     height="80"
+     rx="6"
+     fill="none"
+     stroke="#16181C"
+     stroke-width="2"
+     id="rect3" />
+  <line
+     x1="243.2901"
+     y1="170"
+     x2="396.7099"
+     y2="170"
+     stroke="#16181c"
+     stroke-width="2"
+     id="line4" />
+  <polygon
+     points="388,164 388,176 400,170 "
+     fill="#16181c"
+     id="polygon4"
+     transform="translate(-1.0994395)" />
+  <path
+     d="m 520,170 h 40 V 300 H 80 V 170 h 35.64729"
+     fill="none"
+     stroke="#9aa0a6"
+     stroke-width="2"
+     id="path4"
+     sodipodi:nodetypes="cccccc" />
+  <polygon
+     points="132,164 132,176 120,170 "
+     fill="#9aa0a6"
+     id="polygon5"
+     transform="matrix(-1,0,0,1,238,0)" />
+  <text
+     x="180"
+     y="175"
+     font-family="monospace"
+     font-size="22"
+     fill="#16181C"
+     text-anchor="middle"
+     id="text5">P</text>
+  <text
+     x="460"
+     y="175"
+     font-family="monospace"
+     font-size="22"
+     fill="#0B5563"
+     text-anchor="middle"
+     id="text6">K</text>
+  <rect
+     x="400"
+     y="130"
+     width="120"
+     height="80"
+     rx="6"
+     fill="none"
+     stroke="#0B5563"
+     stroke-width="2"
+     id="rect4" />
 </svg>
