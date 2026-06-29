@@ -1,50 +1,18 @@
 [
   {
     "level": "PhD",
-    "name": "Camila Souza Andrade",
-    "url": "https://scholar.google.com/citations?user=example1",
+    "name": "Paulo Henrique Foganholo Biazetto",
+    "url": "https://paulobiazetto.github.io/academic_page/",
     "status": "Ongoing",
-    "started": "2023",
-    "description": "Backstepping boundary control of coupled reaction-diffusion systems with spatially varying coefficients, with applications to thermal management in batteries."
-  },
-  {
-    "level": "PhD",
-    "name": "Rafael Tanaka Lima",
-    "url": "https://scholar.google.com/citations?user=example2",
-    "status": "Ongoing",
-    "started": "2024",
-    "description": "Data-driven reduced-order models for thermoacoustic instabilities, combining dynamic mode decomposition with Lyapunov-based stability certificates."
-  },
-  {
-    "level": "PhD",
-    "name": "Beatriz Nogueira Costa",
-    "url": "https://scholar.google.com/citations?user=example3",
-    "status": "Ongoing",
-    "started": "2022",
-    "description": "Distributionally robust model predictive control for traffic flow governed by the LWR partial differential equation, with moving-bottleneck constraints."
+    "started": "2021",
+    "description": "In recent years, growths in the quantity and quality of data and advances in computational hardware have led to the development of several Data-driven and Machine-Learning techniques to discover patterns and make predictions in dynamic systems. These approaches have focused on identifying standards and aim to improve product excellence and optimize system performance."
   },
   {
     "level": "Master",
-    "name": "Eduardo Ferreira Martins",
-    "url": "https://scholar.google.com/citations?user=example4",
-    "status": "Ongoing",
-    "started": "2025",
-    "description": "Numerical schemes for adaptive boundary observers in parabolic PDEs with unknown diffusivity coefficients."
-  },
-  {
-    "level": "Master",
-    "name": "Juliana Pereira Rocha",
-    "url": "https://scholar.google.com/citations?user=example5",
-    "status": "Ongoing",
-    "started": "2025",
-    "description": "Comparative analysis of POD and DMD-based reduced-order models for control of distributed-parameter energy systems."
-  },
-  {
-    "level": "Master",
-    "name": "Thiago Almeida Barros",
-    "url": "https://scholar.google.com/citations?user=example6",
+    "name": "Paulo Henrique Foganholo Biazetto",
+    "url": "https://paulobiazetto.github.io/academic_page/",
     "status": "Completed",
-    "started": "2023",
-    "description": "Sliding-mode control strategies for first-order hyperbolic conservation laws, defended in 2025."
+    "started": "2019",
+    "description": "An optimal control strategy aiming to regulate the captured solar energy and to manage the charge and discharge of the thermal energy storage systems suitably to maximize the revenue according to a variable energy tariff is proposed in this work."
   }
 ]

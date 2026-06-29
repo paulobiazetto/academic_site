@@ -1,5 +1,5 @@
 /* ===================================================================
-   Gustavo Artur de Andrade — Academic Website (v2)
+   Paulo Biazetto — Academic Website (v2)
    script.js  (Vanilla JavaScript, ES6+)
 
    One script, loaded on every page. It:
@@ -90,9 +90,9 @@ const LINKEDIN = {
   profileUrl: "https://www.linkedin.com/in/gustavo-artur-de-andrade-89a80355/",
   profileCard: {
     name: "Gustavo Artur de Andrade",
-    headline: "Professor · Control and Automation Engineering",
+    headline: "Professor · Control",
     location: "Florianópolis, Brazil",
-    avatar: "assets/profile/profile.svg",
+    avatar: "assets/profile/profile_2.jpeg",
   },
   feedUrl: "",
   fallbackData: "data/linkedin.json",
@@ -106,7 +106,7 @@ const CONTACTS = [
   { label: "Lattes", value: "lattes.cnpq.br", href: "http://lattes.cnpq.br/9824493377082772", icon: "lattes" },
   { label: "GitHub", value: "github.com/", href: "https://github.com/example", icon: "github" },
   { label: "Google Scholar", value: "scholar.google.com", href: "https://scholar.google.com.br/citations?user=RXSFJBUAAAAJ&hl=pt-BR&oi=ao", icon: "scholar" },
-  { label: "ORCID", value: "0000-0000-0000-0000", href: "https://orcid.org/0000-0000-0000-0000", icon: "orcid" },
+  { label: "ORCID", value: "0000-0001-9560-8833", href: "https://orcid.org/0000-0001-9560-8833", icon: "orcid" },
 ];
 
 // JSON data sources.
@@ -302,7 +302,7 @@ function buildFooter() {
   if (!host) return;
   const inner = createEl("div", { class: "container site-footer__inner" }, [
     createEl("p", { class: "site-footer__copy",
-      text: `© ${new Date().getFullYear()} Gustavo Artur de Andrade · Department of Automation and Systems Engineering` }),
+      text: `© ${new Date().getFullYear()} Gustavo Artur de Andrade · Department of Automation and Systems Engineering, Federal University of Santa Catarina` }),
     createEl("p", { class: "site-footer__note", html:
       'Built with HTML, CSS, and vanilla JavaScript. <a class="site-footer__top" href="#top">Back to top ↑</a>' }),
   ]);
@@ -990,10 +990,10 @@ function renderLinkedInPosts(items) {
       createEl("a", { class: "button button--ghost button--sm", href: LINKEDIN.profileUrl, target: "_blank", rel: "noopener noreferrer", text: "See all activity on LinkedIn" }),
     ])
   );
-  if (!LINKEDIN.feedUrl) {
-    host.append(createEl("p", { class: "linkedin__note",
-      text: 'Add a post link to the "embed" field in data/linkedin.json to show the live post here; entries without a link show as text highlights.' }));
-  }
+  // if (!LINKEDIN.feedUrl) {
+  //   host.append(createEl("p", { class: "linkedin__note",
+  //     text: 'Add a post link to the "embed" field in data/linkedin.json to show the live post here; entries without a link show as text highlights.' }));
+  // }
   observeReveal($$(".li-post", host));
 }
 

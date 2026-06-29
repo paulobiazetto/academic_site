@@ -14,11 +14,11 @@
   <meta property="og:title" content="Gustavo Artur de Andrade — Control of Distributed-Parameter Systems" />
   <meta property="og:description" content="Boundary control of PDEs, infinite-dimensional systems, and machine learning for control." />
   <meta property="og:url" content="https://example.edu/~paulo.biazetto/index.html" />
-  <meta property="og:image" content="assets/profile/profile.svg" />
+  <meta property="og:image" content="assets/profile/profile_2.jpeg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Gustavo Artur de Andrade — Control of Distributed-Parameter Systems" />
   <meta name="twitter:description" content="Boundary control of PDEs, infinite-dimensional systems, and machine learning for control." />
-  <meta name="twitter:image" content="assets/profile/profile.svg" />
+  <meta name="twitter:image" content="assets/profile/profile_2.jpeg" />
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
 
   <!-- Fonts -->
@@ -47,7 +47,7 @@
         <!-- LEFT: identity / presentation -->
         <aside class="home-aside">
           <!-- Professional photo placeholder — replace src with a real photo. -->
-          <img class="home-photo" src="assets/profile/profile.svg" alt="Portrait of Gustavo Artur de Andrade" width="640" height="800" />
+          <img class="home-photo" src="assets/profile/profile_2.jpeg" alt="Portrait of Gustavo Artur de Andrade" width="640" height="800" />
           <div>
             <h1 class="home-name">Gustavo Artur de Andrade</h1>
             <p class="home-role">Professor of Control Engineering</p>
@@ -64,10 +64,12 @@
                the commented slots below. Each .home-university__logo fills
                its grid cell, scaled with object-fit: contain (no stretching). -->
           <div class="home-university" aria-label="Affiliated institutions">
-            <img class="home-university__logo" src="assets/profile/university-logo.png" alt="Universidade Federal de Santa Catarina seal" loading="lazy" />
-            <img class="home-university__logo" src="assets/profile/sba-logo.png" alt="" loading="lazy" />
-            <img class="home-university__logo" src="assets/profile/sba-logo.png" alt="" loading="lazy" />
-            <!-- <img class="home-university__logo" src="assets/profile/logo-4.png" alt="" loading="lazy" /> -->
+            <div class="home-university__inner">
+              <img class="home-university__logo" src="assets/profile/university-logo.png" alt="Universidade Federal de Santa Catarina seal" loading="lazy" />
+              <img class="home-university__logo" src="assets/profile/sbai-logo.png" alt="" loading="lazy" />
+              <img class="home-university__logo" src="assets/profile/sba-logo.png" alt="" loading="lazy" />
+              <!-- <img class="home-university__logo" src="assets/profile/logo-4.png" alt="" loading="lazy" /> -->
+            </div>
           </div>
         </aside>
 
@@ -124,12 +126,6 @@
             </ul>
           </section>
 
-          <!-- Contact information (toggle: HOME_SECTIONS.contact in script.js) -->
-          <section class="home-block" id="home-contact" data-section="contact" aria-labelledby="contact-heading">
-            <h2 class="home-block__heading" id="contact-heading">Contact information</h2>
-            <ul class="contact-list" data-contacts></ul>
-          </section>
-
           <!-- LinkedIn activity (toggle: HOME_SECTIONS.linkedin in script.js) -->
           <section class="home-block linkedin" data-section="linkedin" aria-labelledby="linkedin-heading">
             <h2 class="home-block__heading" id="linkedin-heading">LinkedIn activity</h2>
@@ -138,6 +134,12 @@
                    remaining cells of the same auto-fill grid. -->
               <div class="linkedin__feed" id="linkedin-feed"></div>
             </div>
+          </section>
+
+          <!-- Contact information (toggle: HOME_SECTIONS.contact in script.js) -->
+          <section class="home-block" id="home-contact" data-section="contact" aria-labelledby="contact-heading">
+            <h2 class="home-block__heading" id="contact-heading">Contact information</h2>
+            <ul class="contact-list" data-contacts></ul>
           </section>
 
         </div>
